@@ -1,0 +1,13 @@
+{
+  "name": "playwright-project",
+  "version": "1.0.0",
+  "description": "Playwright project",
+  "main": "index.js",
+  "scripts": {},
+  "author": "Lea Zmaj",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.43.1",
+    "@types/node": "^20.12.7"
+  }
+}
