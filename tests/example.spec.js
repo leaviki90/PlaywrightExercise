@@ -22,22 +22,22 @@ test('To have title', async ({ page }) => {
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });*/
 
-test("Simple click test", async ({page, browserName}) => {
+test("Simple click test", async ({ page, browserName }) => {
   test.skip(browserName === 'firefox', "Working on the firefox fix");
   await page.goto("https://the-internet.herokuapp.com/");
   await page.locator("text=Add/Remove Elements").click();
   //await page.pause();
   await page.locator("text=Add Element").click();
- 
-  
+
+
 })
 
-test("Duplicate test", async ({page}) => {
+test("Duplicate test", async ({ page }) => {
 
   await page.goto("https://the-internet.herokuapp.com/");
   await page.click("text=Add/Remove Elements"); //second way of writing
   //await page.pause();
   await page.click("text=Add Element"); //third way would be in a constant
- 
-  
+
+
 })

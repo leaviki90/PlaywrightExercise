@@ -1,16 +1,16 @@
 import { defineConfig } from '@playwright/test';
 export default defineConfig({
-    retries: 1, //if test fail, it will retry once
+    retries: 0, //if test fail, it will retry once
     timeout: 6000, // one minute
     use: {
-      
+     baseURL: "https://the-internet.herokuapp.com/",
      headless: false,
      viewport: {width: 1280, height: 720},
-     video: "on-first-retry", //this will always record the video no matter if test fails or not
+     video: "off", //this will always record the video no matter if test fails or not
      //if we rerun, video will be overwritten
      //Retain-on-failure only takes a video if there is a failure
      //On-first-retry records video only on first retry
-     screenshot: "off",
+     screenshot: "only-on-failure",//on "on" takes screenshot no matter what the result is
 
     },
     projects: [
