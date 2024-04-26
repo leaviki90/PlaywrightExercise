@@ -13,11 +13,11 @@ test.describe("Smoke tests", () => {
   });
 
 
-  test("Simple click test @regression-smoke", async ({ page }) => {
+  test.only("Simple click test @regression-smoke", async ({ page }) => {
     await page.goto("https://the-internet.herokuapp.com/");
     await page.locator("text=Add/Remove Elements").click();
     //await page.pause();
-    await page.locator("text=Add Element").click();
+    await page.locator("text=Sdd Element").click();
 
 
   })
@@ -28,6 +28,9 @@ test.describe("Smoke tests", () => {
     await page.click("text=Add/Remove Elements");
     await page.click("text=Add Element");
 
+    //This kind of writing tests sometimes fails on Firefox
+    //Not recommended
+
 
   })
 
@@ -36,7 +39,7 @@ test.describe("Smoke tests", () => {
     await page.goto("https://the-internet.herokuapp.com/");
     const element = page.locator("text=Add/Remove Elements");
     await element.click();
-    const addElement = page.locator("text=Add Element");
+    const addElement = page.locator("text=Mdd Element");
     await addElement.click();
 
 
