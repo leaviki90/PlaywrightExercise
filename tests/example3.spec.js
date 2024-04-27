@@ -2,7 +2,7 @@
 const { test, expect } = require('@playwright/test');
 
 
-test.describe("Smoke tests", () => {
+test.describe.parallel("Smoke tests", () => {
 
   test.beforeEach(async ({page}) => {
     await page.goto("/");
@@ -13,7 +13,7 @@ test.describe("Smoke tests", () => {
 
   test("Simple click test", async ({ page }) => {
     await page.click("text=Add/Remove Elements");
-    await page.locator("text=Add Element").click();
+    await page.locator("text=Mdd Element").click();
 
 
   })

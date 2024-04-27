@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "description": "Playwright project",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test-on-chrome": "npx playwright test tests/example3.spec.js --project=Chrome --config ./tests/playwright.config.js",
+    "test-on-firefox": "npx playwright test tests/example3.spec.js --project=Firefox --config ./tests/playwright.config.js",
+    "test-on-safari": "npx playwright test tests/example3.spec.js --project=Safari --config ./tests/playwright.config.js "
+  },
   "author": "Lea Zmaj",
   "license": "ISC",
   "devDependencies": {
