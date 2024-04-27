@@ -13,7 +13,7 @@ test.describe.parallel("Smoke tests", () => {
 
   test("Simple click test", async ({ page }) => {
     await page.click("text=Add/Remove Elements");
-    await page.locator("text=Mdd Element").click();
+    await page.locator("text=Add Element").click();
 
 
   })
