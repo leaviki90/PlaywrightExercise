@@ -14,7 +14,7 @@ test.describe("Authentification", () => {
 
 test.skip("Saving Authentification", async ({page}) => {
     await page.locator('input[name="username"]').click();
-    await page.locator('input[name="username"]').fill('lekizmaj90');
+    await page.locator('input[name="username"]').fill('lekizmaj');
     await page.locator('input[name="password"]').click();
     await page.locator('input[name="password"]').fill('admin123');
     await page.getByRole('button', { name: 'Log In' }).click();

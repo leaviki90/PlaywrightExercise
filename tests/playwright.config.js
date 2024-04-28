@@ -13,7 +13,7 @@ export default defineConfig({
      //Retain-on-failure only takes a video if there is a failure
      //On-first-retry records video only on first retry
      screenshot: "only-on-failure",//on "on" takes screenshot no matter what the result is
-
+     trace: "on-first-retry",
     },
     projects: [
         
